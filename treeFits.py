@@ -2053,6 +2053,7 @@ class Table(Element, _IDProperty, _NameProperty, _UcdProperty,
         self._nrows = nrows
         self.description = None
         self.format = 'tabledata'
+        self.format2 = None
 
         self._fields = HomogeneousList(Field)
         self._params = HomogeneousList(Param)
@@ -2754,8 +2755,13 @@ class Table(Element, _IDProperty, _NameProperty, _UcdProperty,
                         self._write_binary(1, w, **kwargs)
                     elif format == 'binary2':
                         self._write_binary(2, w, **kwargs)
-                    elif format == 'fits':
+                    elif self.format2 == 'fits':
                       # add fits handle ---- J. Schoeleinder 2017.08.02
+                        self._write_fits(w, **kwargs)
+            if format == 'fits':
+                # add fits handle ---- J. Schoeleinder 2017.08.02
+                if (self._href) and (not len(self.array)):
+                    with w.tag('DATA'):
                         self._write_fits(w, **kwargs)
 
 
