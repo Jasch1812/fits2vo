@@ -2053,7 +2053,6 @@ class Table(Element, _IDProperty, _NameProperty, _UcdProperty,
         self._nrows = nrows
         self.description = None
         self.format = 'tabledata'
-        self.format2 = None
 
         self._fields = HomogeneousList(Field)
         self._params = HomogeneousList(Param)
@@ -2062,6 +2061,7 @@ class Table(Element, _IDProperty, _NameProperty, _UcdProperty,
         self._infos  = HomogeneousList(Info)
 
         self.array = ma.array([])
+        self.para_array = [] #---- J. Schoeleinder 2017.08.10
 
         warn_unknown_attrs('TABLE', six.iterkeys(extra), config, pos)
 
@@ -2755,13 +2755,15 @@ class Table(Element, _IDProperty, _NameProperty, _UcdProperty,
                         self._write_binary(1, w, **kwargs)
                     elif format == 'binary2':
                         self._write_binary(2, w, **kwargs)
-                    elif self.format2 == 'fits':
-                      # add fits handle ---- J. Schoeleinder 2017.08.02
-                        self._write_fits(w, **kwargs)
+                    else:
+                        pass
+
+            # add fits handle ---- J. Schoeleinder 2017.08.02
             if format == 'fits':
-                # add fits handle ---- J. Schoeleinder 2017.08.02
-                if (self._href) and (not len(self.array)):
-                    with w.tag('DATA'):
+                with w.tag('DATA'):
+                    if len(self.para_array):
+                        self._write_hdu_table(w, **kwargs)
+                    if self._href:
                         self._write_fits(w, **kwargs)
 
 
@@ -2861,6 +2863,29 @@ class Table(Element, _IDProperty, _NameProperty, _UcdProperty,
                 "ftp or file", NotImplementedError)
         else:
             self._href = fits_path
+
+    def _write_hdu_table(self, w, **kwargs):
+        arr = self.para_array
+
+        with w.tag('TABLEDATA'):
+            w._flush()
+            write = w.write
+            indent_spaces = w.get_indentation_spaces()
+            tr_start = indent_spaces + "<TR>\n"
+            tr_end = indent_spaces + "</TR>\n"
+
+            for i in range(len(arr)):
+                row = arr[i]
+                write(tr_start)
+                val = indent_spaces
+                for el in row:
+                    if not el:
+                        val += "<TD/>"
+                    else:
+                        val += "<TD>" + str(el) + "</TD>"
+                val += "\n"
+                write(val)
+                write(tr_end)
 
     def _write_fits(self, w, **kwargs):
         # write the connection to fits file into xml
