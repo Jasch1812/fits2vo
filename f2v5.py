@@ -97,13 +97,15 @@ class fits2vo:
   #   else:
   #     self._href = self.href_setter()
 
-  def _votable_maker( self ):
-    if not self._hdu_list:
+  def _votable_maker(self):
+    if self._hdu_list:
       self.clean()
     self.hdu_unpack()
+    # print("1->{}".format(self.href))
 
     if not self.href:
       self._href = self.href_setter()
+    # print("2->{}".format(self.href))
 
     votable = vo.VOTableFile(version='1.2')
     resource = vo.Resource()
