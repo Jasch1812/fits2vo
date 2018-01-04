@@ -1,0 +1,85 @@
+line
+/media/MaunaKea/Work/dc/fits_dc/output2/2011.0.00403.S/sg_ouss_id/group_ouss_id/member_ouss_2013-01-23_id/product/Arp220_CO65_selfcal_contsub.head.fits
+/media/MaunaKea/Work/dc/fits_dc/muchmore/2011/2011.0.00403.S/sg_ouss_id/group_ouss_id/member_ouss_2013-01-23_id/product/Arp220_CO65_selfcal_contsub.fits
+/media/MaunaKea/Work/dc/fits_dc/output2/2011.0.00403.S/sg_ouss_id/group_ouss_id/member_ouss_2013-01-23_id/product/Arp220_CO65_selfcal_contsub.spec_peak.jpg
+/media/MaunaKea/Work/dc/fits_dc/output2/2011.0.00403.S/sg_ouss_id/group_ouss_id/member_ouss_2013-01-23_id/product/Arp220_CO65_selfcal_contsub.spec_peak.large.jpg
+/media/MaunaKea/Work/dc/fits_dc/output2/2011.0.00403.S/sg_ouss_id/group_ouss_id/member_ouss_2013-01-23_id/product/Arp220_CO65_selfcal_contsub.m0.fits
+/media/MaunaKea/Work/dc/fits_dc/output2/2011.0.00403.S/sg_ouss_id/group_ouss_id/member_ouss_2013-01-23_id/product/Arp220_CO65_selfcal_contsub.m0.jpg
+/media/MaunaKea/Work/dc/fits_dc/output2/2011.0.00403.S/sg_ouss_id/group_ouss_id/member_ouss_2013-01-23_id/product/Arp220_CO65_selfcal_contsub.m0.large.jpg
+ 
+SIMPLE  =                    T /Standard FITS                                   
+BITPIX  =                  -32 /Floating point (32 bit)                         
+NAXIS   =                    4                                                  
+NAXIS1  =                  300                                                  
+NAXIS2  =                  300                                                  
+NAXIS3  =                  342                                                  
+NAXIS4  =                    1                                                  
+BSCALE  =   1.000000000000E+00 /PHYSICAL = PIXEL*BSCALE + BZERO                 
+BZERO   =   0.000000000000E+00                                                  
+BMAJ    =   1.203589472506E-04                                                  
+BMIN    =   7.339751554860E-05                                                  
+BPA     =   2.825393676758E+01                                                  
+BTYPE   = 'Intensity'                                                           
+OBJECT  = 'Arp 220 '                                                            
+                                                                                
+BUNIT   = 'JY/BEAM '           /Brightness (pixel) unit                         
+EQUINOX =   2.000000000000E+03                                                  
+RADESYS = 'FK5     '                                                            
+LONPOLE =   1.800000000000E+02                                                  
+LATPOLE =   2.350291111111E+01                                                  
+PC001001=   1.000000000000E+00                                                  
+PC002001=   0.000000000000E+00                                                  
+PC003001=   0.000000000000E+00                                                  
+PC004001=   0.000000000000E+00                                                  
+PC001002=   0.000000000000E+00                                                  
+PC002002=   1.000000000000E+00                                                  
+PC003002=   0.000000000000E+00                                                  
+PC004002=   0.000000000000E+00                                                  
+PC001003=   0.000000000000E+00                                                  
+PC002003=   0.000000000000E+00                                                  
+PC003003=   1.000000000000E+00                                                  
+PC004003=   0.000000000000E+00                                                  
+PC001004=   0.000000000000E+00                                                  
+PC002004=   0.000000000000E+00                                                  
+PC003004=   0.000000000000E+00                                                  
+PC004004=   1.000000000000E+00                                                  
+CTYPE1  = 'RA---SIN'                                                            
+CRVAL1  =   2.337386291667E+02                                                  
+CDELT1  =  -1.111111111111E-05                                                  
+CRPIX1  =   1.510000000000E+02                                                  
+CUNIT1  = 'deg     '                                                            
+CTYPE2  = 'DEC--SIN'                                                            
+CRVAL2  =   2.350291111111E+01                                                  
+CDELT2  =   1.111111111111E-05                                                  
+CRPIX2  =   1.510000000000E+02                                                  
+CUNIT2  = 'deg     '                                                            
+CTYPE3  = 'FREQ    '                                                            
+CRVAL3  =   6.835495999160E+11                                                  
+CDELT3  =  -2.306505922827E+07                                                  
+CRPIX3  =   1.000000000000E+00                                                  
+CUNIT3  = 'Hz      '                                                            
+CTYPE4  = 'STOKES  '                                                            
+CRVAL4  =   1.000000000000E+00                                                  
+CDELT4  =   1.000000000000E+00                                                  
+CRPIX4  =   1.000000000000E+00                                                  
+CUNIT4  = '        '                                                            
+PV2_1   =   0.000000000000E+00                                                  
+PV2_2   =   0.000000000000E+00                                                  
+RESTFRQ =   6.914730800000E+11 /Rest Frequency (Hz)                             
+SPECSYS = 'LSRK    '           /Spectral reference frame                        
+ALTRVAL =   3.435274111170E+06 /Alternate frequency reference value             
+ALTRPIX =   1.000000000000E+00 /Alternate frequency reference pixel             
+VELREF  =                  257 /1 LSR, 2 HEL, 3 OBS, +256 Radio                 
+COMMENT casacore non-standard usage: 4 LSD, 5 GEO, 6 SOU, 7 GAL                 
+TELESCOP= 'ALMA    '                                                            
+OBSERVER= 'nrangwala'                                                           
+DATE-OBS= '2012-12-31T10:43:03.648000'                                          
+TIMESYS = 'UTC     '                                                            
+OBSRA   =   2.337386291667E+02                                                  
+OBSDEC  =   2.350291111111E+01                                                  
+OBSGEO-X=   2.225142180269E+06                                                  
+OBSGEO-Y=  -5.440307370349E+06                                                  
+OBSGEO-Z=  -2.481029851874E+06                                                  
+DATE    = '2013-01-24T01:27:56.472000' /Date FITS file was written              
+ORIGIN  = 'CASA 3.4.0 (release r19988)'                                         
+END                                                                             

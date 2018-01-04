@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Produced with astropy.io.votable version 1.3.2
+     http://www.astropy.org/ -->
+<VOTABLE version="1.2" xmlns="http://www.ivoa.net/xml/VOTable/v1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.ivoa.net/xml/VOTable/v1.2">
+ <RESOURCE type="results">
+  <TABLE>
+   <DESCRIPTION>
+    TWHydra_CO3_2line.image
+   </DESCRIPTION>
+   <PARAM ID="BTYPE" arraysize="*" datatype="char" name="BTYPE" value="Intensity"/>
+   <PARAM ID="DATE" arraysize="*" datatype="char" name="DATE" value="2011-05-30T22:09:42.083000"/>
+   <PARAM ID="PC004003" datatype="double" name="PC004003" value="0"/>
+   <PARAM ID="CDELT2" datatype="double" name="CDELT2" value="8.333333333333e-05"/>
+   <PARAM ID="EQUINOX" datatype="double" name="EQUINOX" value="2000"/>
+   <PARAM ID="RESTFRQ" datatype="double" name="RESTFRQ" value="345795990000"/>
+   <PARAM ID="PC004002" datatype="double" name="PC004002" value="0"/>
+   <PARAM ID="ALTRVAL" datatype="double" name="ALTRVAL" value="-3999.999947043"/>
+   <PARAM ID="PC003003" datatype="double" name="PC003003" value="1"/>
+   <PARAM ID="OBSDEC" datatype="double" name="OBSDEC" value="-34.70476691248"/>
+   <PARAM ID="OBSGEO-Y" datatype="double" name="OBSGEO-Y" value="-5440307.370349"/>
+   <PARAM ID="OBSGEO-Z" datatype="double" name="OBSGEO-Z" value="-2481029.851874"/>
+   <PARAM ID="PC004004" datatype="double" name="PC004004" value="1"/>
+   <PARAM ID="CRPIX2" datatype="double" name="CRPIX2" value="51"/>
+   <PARAM ID="CTYPE1" arraysize="*" datatype="char" name="CTYPE1" value="RA---SIN"/>
+   <PARAM ID="CRVAL4" datatype="double" name="CRVAL4" value="1"/>
+   <PARAM ID="CDELT1" datatype="double" name="CDELT1" value="-8.333333333333e-05"/>
+   <PARAM ID="PC002001" datatype="double" name="PC002001" value="0"/>
+   <PARAM ID="CRPIX4" datatype="double" name="CRPIX4" value="1"/>
+   <PARAM ID="NAXIS2" datatype="int" name="NAXIS2" value="100"/>
+   <PARAM ID="TELESCOP" arraysize="*" datatype="char" name="TELESCOP" value="ALMA"/>
+   <PARAM ID="OBJECT" arraysize="*" datatype="char" name="OBJECT" value="TW Hya"/>
+   <PARAM ID="TIMESYS" arraysize="*" datatype="char" name="TIMESYS" value="UTC"/>
+   <PARAM ID="PC001002" datatype="double" name="PC001002" value="0"/>
+   <PARAM ID="ALTRPIX" datatype="double" name="ALTRPIX" value="1"/>
+   <PARAM ID="BSCALE" datatype="double" name="BSCALE" value="1"/>
+   <PARAM ID="SIMPLE" arraysize="*" datatype="char" name="SIMPLE" value="True"/>
+   <PARAM ID="NAXIS4" datatype="int" name="NAXIS4" value="1"/>
+   <PARAM ID="PC001003" datatype="double" name="PC001003" value="0"/>
+   <PARAM ID="CRPIX3" datatype="double" name="CRPIX3" value="1"/>
+   <PARAM ID="OBSERVER" arraysize="*" datatype="char" name="OBSERVER" value="Unknown"/>
+   <PARAM ID="CTYPE4" arraysize="*" datatype="char" name="CTYPE4" value="STOKES"/>
+   <PARAM ID="OBSGEO-X" datatype="double" name="OBSGEO-X" value="2225142.180269"/>
+   <PARAM ID="BMAJ" datatype="double" name="BMAJ" value="0.0004668472210566"/>
+   <PARAM ID="OBSRA" datatype="double" name="OBSRA" value="165.4660207616"/>
+   <PARAM ID="NAXIS1" datatype="int" name="NAXIS1" value="100"/>
+   <PARAM ID="BZERO" datatype="double" name="BZERO" value="0"/>
+   <PARAM ID="PC003001" datatype="double" name="PC003001" value="0"/>
+   <PARAM ID="PC003004" datatype="double" name="PC003004" value="0"/>
+   <PARAM ID="BMIN" datatype="double" name="BMIN" value="0.0004255372948117"/>
+   <PARAM ID="PC001001" datatype="double" name="PC001001" value="1"/>
+   <PARAM ID="CRVAL2" datatype="double" name="CRVAL2" value="-34.70476691248"/>
+   <PARAM ID="CTYPE3" arraysize="*" datatype="char" name="CTYPE3" value="FREQ"/>
+   <PARAM ID="NAXIS" datatype="int" name="NAXIS" value="4"/>
+   <PARAM ID="CUNIT3" arraysize="*" datatype="char" name="CUNIT3" value="HZ"/>
+   <PARAM ID="LONPOLE" datatype="double" name="LONPOLE" value="180"/>
+   <PARAM ID="CDELT4" datatype="double" name="CDELT4" value="1"/>
+   <PARAM ID="CUNIT4" arraysize="*" datatype="char" name="CUNIT4" value=""/>
+   <PARAM ID="PC003002" datatype="double" name="PC003002" value="0"/>
+   <PARAM ID="PV2_2" datatype="double" name="PV2_2" value="0"/>
+   <PARAM ID="CDELT3" datatype="double" name="CDELT3" value="-138414.1518555"/>
+   <PARAM ID="PC002002" datatype="double" name="PC002002" value="1"/>
+   <PARAM ID="PC002004" datatype="double" name="PC002004" value="0"/>
+   <PARAM ID="CRVAL1" datatype="double" name="CRVAL1" value="165.4660207616"/>
+   <PARAM ID="BITPIX" datatype="int" name="BITPIX" value="-32"/>
+   <PARAM ID="CRVAL3" datatype="double" name="CRVAL3" value="345800603805"/>
+   <PARAM ID="PV2_1" datatype="double" name="PV2_1" value="0"/>
+   <PARAM ID="SPECSYS" arraysize="*" datatype="char" name="SPECSYS" value="LSRK"/>
+   <PARAM ID="CRPIX1" datatype="double" name="CRPIX1" value="51"/>
+   <PARAM ID="COMMENT" arraysize="*" datatype="char" name="COMMENT" value="casacore non-standard usage: 4 LSD, 5 GEO, 6 SOU, 7 GAL"/>
+   <PARAM ID="BUNIT" arraysize="*" datatype="char" name="BUNIT" value="JY/BEAM"/>
+   <PARAM ID="NAXIS3" datatype="int" name="NAXIS3" value="118"/>
+   <PARAM ID="ORIGIN" arraysize="*" datatype="char" name="ORIGIN" value="CASA casacore alma-evla"/>
+   <PARAM ID="VELREF" datatype="int" name="VELREF" value="257"/>
+   <PARAM ID="PC004001" datatype="double" name="PC004001" value="0"/>
+   <PARAM ID="PC002003" datatype="double" name="PC002003" value="0"/>
+   <PARAM ID="PC001004" datatype="double" name="PC001004" value="0"/>
+   <PARAM ID="CUNIT2" arraysize="*" datatype="char" name="CUNIT2" value="deg"/>
+   <PARAM ID="CUNIT1" arraysize="*" datatype="char" name="CUNIT1" value="deg"/>
+   <PARAM ID="DATE-OBS" arraysize="*" datatype="char" name="DATE-OBS" value="2011-04-22T00:15:41.760000"/>
+   <PARAM ID="BPA" datatype="double" name="BPA" value="22.30152130127"/>
+   <PARAM ID="CTYPE2" arraysize="*" datatype="char" name="CTYPE2" value="DEC--SIN"/>
+   <PARAM ID="LATPOLE" datatype="double" name="LATPOLE" value="-34.70476691248"/>
+   <DATA>
+    <FITS>
+     <STREAM href="file:///Users/jasch/Dropbox/VOTable/TWHYA_BAND7/TWHydra_CO3_2line.image.fits">
+     </STREAM>
+    </FITS>
+   </DATA>
+  </TABLE>
+ </RESOURCE>
+</VOTABLE>

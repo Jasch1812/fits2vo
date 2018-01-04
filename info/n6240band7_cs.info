@@ -1,0 +1,85 @@
+line
+/media/MaunaKea/Work/dc/fits_dc/output2/2011.0.00175.S/sg_ouss_id/group_ouss_id/member_ouss_2012-09-06_id/product/n6240band7_cs.head.fits
+/media/MaunaKea/Work/dc/fits_dc/muchmore/2011/2011.0.00175.S/sg_ouss_id/group_ouss_id/member_ouss_2012-09-06_id/product/n6240band7_cs.fits
+/media/MaunaKea/Work/dc/fits_dc/output2/2011.0.00175.S/sg_ouss_id/group_ouss_id/member_ouss_2012-09-06_id/product/n6240band7_cs.spec_peak.jpg
+/media/MaunaKea/Work/dc/fits_dc/output2/2011.0.00175.S/sg_ouss_id/group_ouss_id/member_ouss_2012-09-06_id/product/n6240band7_cs.spec_peak.large.jpg
+/media/MaunaKea/Work/dc/fits_dc/output2/2011.0.00175.S/sg_ouss_id/group_ouss_id/member_ouss_2012-09-06_id/product/n6240band7_cs.m0.fits
+/media/MaunaKea/Work/dc/fits_dc/output2/2011.0.00175.S/sg_ouss_id/group_ouss_id/member_ouss_2012-09-06_id/product/n6240band7_cs.m0.jpg
+/media/MaunaKea/Work/dc/fits_dc/output2/2011.0.00175.S/sg_ouss_id/group_ouss_id/member_ouss_2012-09-06_id/product/n6240band7_cs.m0.large.jpg
+ 
+SIMPLE  =                    T /Standard FITS                                   
+BITPIX  =                  -32 /Floating point (32 bit)                         
+NAXIS   =                    4                                                  
+NAXIS1  =                  360                                                  
+NAXIS2  =                  360                                                  
+NAXIS3  =                   30                                                  
+NAXIS4  =                    1                                                  
+BSCALE  =   1.000000000000E+00 /PHYSICAL = PIXEL*BSCALE + BZERO                 
+BZERO   =   0.000000000000E+00                                                  
+BMAJ    =   1.408974826336E-04                                                  
+BMIN    =   1.109538061751E-04                                                  
+BPA     =   7.572002410889E+01                                                  
+BTYPE   = 'Intensity'                                                           
+OBJECT  = 'NGC6240 '                                                            
+                                                                                
+BUNIT   = 'JY/BEAM '           /Brightness (pixel) unit                         
+EQUINOX =   2.000000000000E+03                                                  
+RADESYS = 'FK5     '                                                            
+LONPOLE =   1.800000000000E+02                                                  
+LATPOLE =   2.400833333333E+00                                                  
+PC001001=   1.000000000000E+00                                                  
+PC002001=   0.000000000000E+00                                                  
+PC003001=   0.000000000000E+00                                                  
+PC004001=   0.000000000000E+00                                                  
+PC001002=   0.000000000000E+00                                                  
+PC002002=   1.000000000000E+00                                                  
+PC003002=   0.000000000000E+00                                                  
+PC004002=   0.000000000000E+00                                                  
+PC001003=   0.000000000000E+00                                                  
+PC002003=   0.000000000000E+00                                                  
+PC003003=   1.000000000000E+00                                                  
+PC004003=   0.000000000000E+00                                                  
+PC001004=   0.000000000000E+00                                                  
+PC002004=   0.000000000000E+00                                                  
+PC003004=   0.000000000000E+00                                                  
+PC004004=   1.000000000000E+00                                                  
+CTYPE1  = 'RA---SIN'                                                            
+CRVAL1  =   2.532454166667E+02                                                  
+CDELT1  =  -3.055555555556E-05                                                  
+CRPIX1  =   1.810000000000E+02                                                  
+CUNIT1  = 'deg     '                                                            
+CTYPE2  = 'DEC--SIN'                                                            
+CRVAL2  =   2.400833333333E+00                                                  
+CDELT2  =   3.055555555556E-05                                                  
+CRPIX2  =   1.810000000000E+02                                                  
+CUNIT2  = 'deg     '                                                            
+CTYPE3  = 'FREQ    '                                                            
+CRVAL3  =   3.355854699998E+11                                                  
+CDELT3  =  -6.250000000000E+07                                                  
+CRPIX3  =   1.000000000000E+00                                                  
+CUNIT3  = 'Hz      '                                                            
+CTYPE4  = 'STOKES  '                                                            
+CRVAL4  =   1.000000000000E+00                                                  
+CDELT4  =   1.000000000000E+00                                                  
+CRPIX4  =   1.000000000000E+00                                                  
+CUNIT4  = '        '                                                            
+PV2_1   =   0.000000000000E+00                                                  
+PV2_2   =   0.000000000000E+00                                                  
+RESTFRQ =   3.356479699998E+11 /Rest Frequency (Hz)                             
+SPECSYS = 'TOPOCENT'           /Spectral reference frame                        
+ALTRVAL =   5.582345284262E+04 /Alternate frequency reference value             
+ALTRPIX =   1.000000000000E+00 /Alternate frequency reference pixel             
+VELREF  =                  259 /1 LSR, 2 HEL, 3 OBS, +256 Radio                 
+COMMENT casacore non-standard usage: 4 LSD, 5 GEO, 6 SOU, 7 GAL                 
+TELESCOP= 'ALMA    '                                                            
+OBSERVER= 'nscoville'                                                           
+DATE-OBS= '2012-07-03T02:00:22.272000'                                          
+TIMESYS = 'UTC     '                                                            
+OBSRA   =   2.532454166667E+02                                                  
+OBSDEC  =   2.400833333333E+00                                                  
+OBSGEO-X=   2.225142180269E+06                                                  
+OBSGEO-Y=  -5.440307370349E+06                                                  
+OBSGEO-Z=  -2.481029851874E+06                                                  
+DATE    = '2012-08-14T14:39:56.308000' /Date FITS file was written              
+ORIGIN  = 'CASA 3.3.0 (release r16856)'                                         
+END                                                                             
