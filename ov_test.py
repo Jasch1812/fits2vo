@@ -5,7 +5,7 @@ import glob
 from astropy.io.votable import parse
 
 
-nm = glob.glob('/home/johann/Desktop/*.png')[0]
+nm = glob.glob('./*.png')[0]
 imArr = misc.imread(nm).astype(np.int32)
 r, c = imArr.shape
 # print imArr.dtype
@@ -44,6 +44,6 @@ table.create_arrays(r)
 for i in range(r):
   table.array[i] = imArr[i]
 
-# votable.to_xml('A_vo_tabledata.xml')
+votable.to_xml('A_vo_tabledata.xml')
 # votable.to_xml('A_vo_binary.xml', tabledata_format='binary')
-votable.to_xml('A_vo_binary2.xml', tabledata_format='binary2')
+# votable.to_xml('A_vo_binary2.xml', tabledata_format='binary2')
