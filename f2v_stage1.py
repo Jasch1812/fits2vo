@@ -1,4 +1,5 @@
-import f2v_core as f2v
+from f2v_basic import BasicTable
+import astropy.io.votable.treeFits as vot
 
 
 class NameAnalysis:
@@ -190,79 +191,10 @@ class NameAnalysis:
         return type_list[i]
 
 
-class BasicTable (NameAnalysis):
-    def __init__(self, keys_ignord_basic=['', 'COMMENT', 'HISTORY']):
-        NameAnalysis.__init__(self)
-        self.fv = f2v.fits2vo('fits', keys_ignord=keys_ignord_basic)
-        self._fits_path = ''
-        self.LinkKeys = []
-        self.table_name = ''
-
-    def set_table_name(self, table_nm):
-        if table_nm == 'line':
-            self.table_name = 'data_cube'
-        else:
-            self.table_name = table_nm
-
-    def importFits(self, fits_head):
-        '''return a fits handle'''
-        return self.fv.import_fits(fits_head)
-
-    def setFitsDiscr(self):
-        # fits_nm = self.filename(fits_abs)
-        self.fv.set_fits_pre(self.core_fitsname)
-
-    def set_fitsPath(self, fits_abs):
-        self._fits_path = 'file://' + fits_abs
-        return self
-
-    def get_fitsPath(self):
-        return self._fits_path
-
-    def add_FitsLink(self, link_nm, link_cont, link_keys=[]):
-        link_keys.append(link_nm)
-        ln = self.fv.make_link('image/fits', link_nm, link_cont)
-        self.fv.links_dict[link_nm] = ln
-        return self
-
-    def add_JPGLink(self, link_nm, link_cont, link_keys=[]):
-        link_keys.append(link_nm)
-        ln = self.fv.make_link('image/jpeg', link_nm, link_cont)
-        self.fv.links_dict[link_nm] = ln
-        return self
-
-    def basic_fits2vo(self, fits_head, fits_abs, xml_pre):
-        fits_handleList = self.importFits(fits_head)
-        if not fits_handleList:
-            return 'OpenningError'
-        self.setFitsDiscr()
-        self.set_fitsPath(fits_abs)
-        # self.fv.set_fits_pre(self.core_fitsname)
-
-#   check whether 'fits_handleList' and 'LinkKeys' have the same length
-        while len(self.LinkKeys) < len(fits_handleList):
-            self.LinkKeys.append([])
-
-        BasicVO = self.fv.make_votable()
-        BasicRes = self.fv.make_resource()
-        fp = self.get_fitsPath()
-        for i in list(range(len(fits_handleList))):
-            fitsHD = fits_handleList[i].header
-            hdu = self.fv.hdu_unpack(fitsHD)
-            if not hdu:
-                return 'ExtractingError'
-            lk = self.LinkKeys[i]
-            table = self.fv.make_table(BasicVO, self.table_name, hdu, fp, lk)
-            BasicRes.tables.append(table)
-        BasicVO.resources.append(BasicRes)
-        self.fv.xml_pre = xml_pre
-        self.fv.f2v(BasicVO)
-        return 0
-
-
-class Table_Stage1 (BasicTable):
+class Table_Stage1 (BasicTable, NameAnalysis):
     def __init__(self, keys_ignord_stage1=['', 'COMMENT', 'HISTORY']):
-        BasicTable.__init__(self, keys_ignord_basic=keys_ignord_stage1)
+        BasicTable.__init__(self, vot, keys_ignord_basic=keys_ignord_stage1)
+        NameAnalysis.__init__(self)
         self.link_images = []
 
     def import_info(self, info_file):
@@ -270,7 +202,7 @@ class Table_Stage1 (BasicTable):
 #   read information from info file
         with open(info_file, 'r') as in_file:
             for line in in_file:
-                if (' ' in line): # or ('=' in line):
+                if (' ' in line):  # or ('=' in line):
                     break
                 elif line == '':
                     continue
@@ -278,9 +210,11 @@ class Table_Stage1 (BasicTable):
                     info_cont.append(line.strip())
 #   'info_cont' is a list
 #        print(info_cont)
-#   0: fits type, 1: head fits, 2: data fits, other: auxiliary images
+#   0: fits type, 1: project ID, 2: head fits, 3: data fits, other: auxiliary images
 #   remove 'fits type' from the list
         self.set_table_name(info_cont.pop(0))
+#   remove the 'project ID' from the list
+        self.project_id = info_cont.pop(0)
 #   remove the 'head fits' from the list
         head_fits = info_cont.pop(0)
         # print(head_fits)
@@ -290,6 +224,9 @@ class Table_Stage1 (BasicTable):
 
         if self.isFits(head_fits):
             self.set_corename(head_fits)
+
+        if not self.core_fitsname:
+            self.setFitsDiscr(self.core_fitsname)
 
         if self.isFits(data_fits):
             self.fits_abs = data_fits
@@ -318,7 +255,7 @@ class Table_Stage1 (BasicTable):
         # print(self.LinkKeys)
 
     def fits2vo(self, xml_pre, headFits):
-        return self.basic_fits2vo(headFits, self.fits_abs, xml_pre)
+        return self.basic_fits2vo(headFits, self.fits_abs, xml_pre, self.core_fitsname)
 
 
 
